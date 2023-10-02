@@ -22,33 +22,75 @@ class MyCardz extends LitElement {
       background-color: var(--my-cardz-background-color);
     }
 
-    main {
-      flex-grow: 1;
+    .btn-wrapper header{
+      font-size: 35px; 
+      color: Blue;
+      margin: 1px;
     }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
+    
+    .btn-wrapper {
+      margin: 24px auto;
+      padding: 20px;
+      border: 30px solid black; 
     }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
+    
+    .btn-wrapper button {
+      font-size: 15px;
+      color: white;
+      background-color: blue;
+      margin-left: 1px;
+      margin-top: 1px;
+      padding: 1px;
+      position: relative;
+      top: 20px;
+      left: 350px;
+    }
+    
+    .btn-wrapper textarea{
+      color: white;
+      font-size: 14px;
+      margin-left: 1px;
+      margin-top: 0px;
+      background-color: blue;
+      height: 175px;
+      width: 250px;
+    }
+    .btn-wrapper QB Pic{
+      margin-left: 1px;
+      margin-top: 1px;
+      padding-top: 1px;
+      height: 50px;
+      width: 25px;
+      
+    }
+    .btn-wrapper Linebacker Pic{
+      margin-left: 1px;
+      margin-top: 50px;
+      padding-top: 100px;
+    }
+    @media only screen and (max-width: 800px) {
+      body {
+        background-color: lightblue;
       }
-      to {
-        transform: rotate(360deg);
+    }
+    @media only screen and (max-width: 500px) {
+      body {
+        scale: button; 
+        scale: Linebacker Pic;
+        scale: QB Pic;
       }
     }
 
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
+    .QB{
+      height: 150px;
+      width: 200px;
+      
     }
-
-    .app-footer a {
-      margin-left: 5px;
+    .LB{
+      height: 200px;
+      width: 200px;
     }
-  `;
+  ;`
 
   constructor() {
     super();
@@ -58,18 +100,18 @@ class MyCardz extends LitElement {
   render() {
     return html`
       <main>
-        <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
-        <h1>${this.header}</h1>
-
-        <p>Edit <code>src/MyCardz.js</code> and save to reload.</p>
-        <a
-          class="app-link"
-          href="https://open-wc.org/guides/developing-components/code-examples/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code examples
-        </a>
+        <div class="btn-wrapper">
+          <header id="header">Penn State Football</header>
+          <textarea>these buttons will send you to the personal page for the starting quarterback and main linebacker for the Penn State Football team. The Quarter back is the top image and the Middle Line Backer is the bottom Image. Click on the botton now to find out more information.</textarea>
+          <img class='QB' src="https://www.statecollege.com/wp-content/uploads/2023/09/BURDICK-Delaware-Allar-throw-1st-half-scaled.jpg" alt="QB Pic"></img>
+          <img class='LB' src="https://media.gettyimages.com/id/1244435446/es/foto/penn-state-linebacker-abdul-carter-reads-the-play-during-the-ohio-state-buckeyes-versus-penn.jpg?s=1024x1024&w=gi&k=20&c=FMTrLWUDVFD4tlL3lTye07SIdHsFU_05SXkmsJFTwIM=" alt="Linebacker Pic"></img>
+          <a href="https://gopsusports.com/sports/football/roster/drew-allar/13992">
+            <button>Quarterbackdetails</button>
+          </a>
+          <a href="https://gopsusports.com/sports/football/roster/abdul-carter/13999">
+          <button>Middle Line Backer</button>
+          </a>
+        </div>
       </main>
 
       <p class="app-footer">
