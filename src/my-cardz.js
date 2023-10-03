@@ -33,7 +33,7 @@ class MyCardz extends LitElement {
       padding: 20px;
       border: 30px solid black; 
     }
-    
+    /*
     .btn-wrapper button {
       font-size: 15px;
       color: white;
@@ -43,7 +43,31 @@ class MyCardz extends LitElement {
       padding: 1px;
       position: relative;
       top: 20px;
-      left: 350px;
+      left: -400px;
+    }
+    */
+
+    .btn-wrapper QBB{
+      font-size: 15px;
+      color: white;
+      background-color: blue;
+      margin-left: 1px;
+      margin-top: 1px;
+      padding: 1px;
+      position: relative;
+      top: 20px;
+      left: 1000px;
+    }
+    .btn-wrapper MLBB{
+      font-size: 15px;
+      color: white;
+      background-color: blue;
+      margin-left: 1px;
+      margin-top: 1px;
+      padding: 1px;
+      position: relative;
+      top: 20px;
+      left: 500px;
     }
     
     .btn-wrapper textarea{
@@ -106,11 +130,22 @@ class MyCardz extends LitElement {
           <img class='QB' src="https://www.statecollege.com/wp-content/uploads/2023/09/BURDICK-Delaware-Allar-throw-1st-half-scaled.jpg" alt="QB Pic"></img>
           <img class='LB' src="https://media.gettyimages.com/id/1244435446/es/foto/penn-state-linebacker-abdul-carter-reads-the-play-during-the-ohio-state-buckeyes-versus-penn.jpg?s=1024x1024&w=gi&k=20&c=FMTrLWUDVFD4tlL3lTye07SIdHsFU_05SXkmsJFTwIM=" alt="Linebacker Pic"></img>
           <a href="https://gopsusports.com/sports/football/roster/drew-allar/13992">
-            <button>Quarterbackdetails</button>
+            <button id="QBB">Quarterbackdetails</button>
           </a>
           <a href="https://gopsusports.com/sports/football/roster/abdul-carter/13999">
-          <button>Middle Line Backer</button>
+          <button id="MLBB">Middle Line Backer</button>
           </a>
+        </div>
+
+        <div class="duplicate-card">
+          <button id="dup"> duplicate</button>
+          <script>
+            document.querySelector('#dup').addEventListener('click', (e) => {
+              let p = document.getElementById("btn-wrapper");
+              let d = p.cloneNode(true);
+              document.body.appendChild(d);
+          });
+          </script>
         </div>
       </main>
 
